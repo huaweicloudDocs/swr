@@ -15,24 +15,24 @@ GET /v2/manage/namespaces/\{namespace\}/repos/\{repository\}/tags
 <a name="table11843162810214"></a>
 <table><thead align="left"><tr id="row20843172818213"><th class="cellrowborder" valign="top" width="30.61%" id="mcps1.2.4.1.1"><p id="p3843528621"><a name="p3843528621"></a><a name="p3843528621"></a>参数名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="27.55%" id="mcps1.2.4.1.2"><p id="p1384319283210"><a name="p1384319283210"></a><a name="p1384319283210"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="33.4%" id="mcps1.2.4.1.2"><p id="p1384319283210"><a name="p1384319283210"></a><a name="p1384319283210"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="41.839999999999996%" id="mcps1.2.4.1.3"><p id="p1584342811211"><a name="p1584342811211"></a><a name="p1584342811211"></a>描述</p>
+<th class="cellrowborder" valign="top" width="35.99%" id="mcps1.2.4.1.3"><p id="p1584342811211"><a name="p1584342811211"></a><a name="p1584342811211"></a>描述</p>
 </th>
 </tr>
 </thead>
 <tbody><tr id="row1084316281925"><td class="cellrowborder" valign="top" width="30.61%" headers="mcps1.2.4.1.1 "><p id="p6843228526"><a name="p6843228526"></a><a name="p6843228526"></a>namespace</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.55%" headers="mcps1.2.4.1.2 "><p id="p284310281826"><a name="p284310281826"></a><a name="p284310281826"></a>否</p>
+<td class="cellrowborder" valign="top" width="33.4%" headers="mcps1.2.4.1.2 "><p id="p284310281826"><a name="p284310281826"></a><a name="p284310281826"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="41.839999999999996%" headers="mcps1.2.4.1.3 "><p id="p85037015469"><a name="p85037015469"></a><a name="p85037015469"></a>组织名称</p>
+<td class="cellrowborder" valign="top" width="35.99%" headers="mcps1.2.4.1.3 "><p id="p85037015469"><a name="p85037015469"></a><a name="p85037015469"></a>组织名称</p>
 </td>
 </tr>
 <tr id="row1319321944420"><td class="cellrowborder" valign="top" width="30.61%" headers="mcps1.2.4.1.1 "><p id="p919315194441"><a name="p919315194441"></a><a name="p919315194441"></a>repository</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.55%" headers="mcps1.2.4.1.2 "><p id="p17193161964410"><a name="p17193161964410"></a><a name="p17193161964410"></a>否</p>
+<td class="cellrowborder" valign="top" width="33.4%" headers="mcps1.2.4.1.2 "><p id="p17193161964410"><a name="p17193161964410"></a><a name="p17193161964410"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="41.839999999999996%" headers="mcps1.2.4.1.3 "><p id="p13193201924411"><a name="p13193201924411"></a><a name="p13193201924411"></a>镜像仓库名称</p>
+<td class="cellrowborder" valign="top" width="35.99%" headers="mcps1.2.4.1.3 "><p id="p13193201924411"><a name="p13193201924411"></a><a name="p13193201924411"></a>镜像仓库名称</p>
 </td>
 </tr>
 </tbody>
@@ -46,7 +46,7 @@ N/A。
 
 **响应参数**
 
-响应参数如[表2 响应参数](#table45446245174724)所示。
+响应参数如[表2](#table45446245174724)所示。
 
 **表 2**  响应参数
 
@@ -70,14 +70,14 @@ N/A。
 </td>
 <td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p20980132718193"><a name="p20980132718193"></a><a name="p20980132718193"></a>int64</p>
 </td>
-<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p14980192714197"><a name="p14980192714197"></a><a name="p14980192714197"></a>编号</p>
+<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p14980192714197"><a name="p14980192714197"></a><a name="p14980192714197"></a>仓库编号</p>
 </td>
 </tr>
 <tr id="row17668249354"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p3602231570"><a name="p3602231570"></a><a name="p3602231570"></a>Tag</p>
 </td>
 <td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p360215315712"><a name="p360215315712"></a><a name="p360215315712"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p206025311878"><a name="p206025311878"></a><a name="p206025311878"></a>Tag名称，数字、字母或下划线开头，后面跟数字、字母、下划线、点、短横线，最长128个字符。</p>
+<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p206025311878"><a name="p206025311878"></a><a name="p206025311878"></a>Tag版本名称。</p>
 </td>
 </tr>
 <tr id="row176816213207"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p1568212212204"><a name="p1568212212204"></a><a name="p1568212212204"></a>image_id</p>
@@ -85,6 +85,13 @@ N/A。
 <td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p1568252172015"><a name="p1568252172015"></a><a name="p1568252172015"></a>string</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p1968202192013"><a name="p1968202192013"></a><a name="p1968202192013"></a>镜像id</p>
+</td>
+</tr>
+<tr id="row2590104211156"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p1592204251517"><a name="p1592204251517"></a><a name="p1592204251517"></a>manifest</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p95921422152"><a name="p95921422152"></a><a name="p95921422152"></a>string</p>
+</td>
+<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p145923427155"><a name="p145923427155"></a><a name="p145923427155"></a>镜像manifest</p>
 </td>
 </tr>
 <tr id="row411720412429"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p8361449104214"><a name="p8361449104214"></a><a name="p8361449104214"></a>digest</p>
@@ -106,7 +113,14 @@ N/A。
 <td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p460211311279"><a name="p460211311279"></a><a name="p460211311279"></a>string</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p9603163112712"><a name="p9603163112712"></a><a name="p9603163112712"></a>镜像pull地址，格式为</p>
-<p id="p8659141362"><a name="p8659141362"></a><a name="p8659141362"></a>swr.cn-north-1.myhuaweicloud.com/domain/repository:tag。</p>
+<p id="p8659141362"><a name="p8659141362"></a><a name="p8659141362"></a>swr.cn-north-1.myhuaweicloud.com/namespace/repository:tag。</p>
+</td>
+</tr>
+<tr id="row207081451715"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p1701714191712"><a name="p1701714191712"></a><a name="p1701714191712"></a>internal_path</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p470314161716"><a name="p470314161716"></a><a name="p470314161716"></a>string</p>
+</td>
+<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p07051481718"><a name="p07051481718"></a><a name="p07051481718"></a>cce集群内镜像pull路径，格式为 10.125.0.198:20202/namespace/repository:tag</p>
 </td>
 </tr>
 <tr id="row12917712114013"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p15603531879"><a name="p15603531879"></a><a name="p15603531879"></a>size</p>
@@ -114,6 +128,13 @@ N/A。
 <td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p1760318310710"><a name="p1760318310710"></a><a name="p1760318310710"></a>int64</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p136038314714"><a name="p136038314714"></a><a name="p136038314714"></a>镜像大小，0 ~ 9223372036854775807。</p>
+</td>
+</tr>
+<tr id="row6189161112289"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p519041132810"><a name="p519041132810"></a><a name="p519041132810"></a>is_trusted</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.76692330766923%" headers="mcps1.2.4.1.2 "><p id="p1119014117288"><a name="p1119014117288"></a><a name="p1119014117288"></a>bool</p>
+</td>
+<td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.3 "><p id="p13191811182818"><a name="p13191811182818"></a><a name="p13191811182818"></a>默认值为false</p>
 </td>
 </tr>
 <tr id="row24091911193911"><td class="cellrowborder" valign="top" width="34.616538346165385%" headers="mcps1.2.4.1.1 "><p id="p13603531378"><a name="p13603531378"></a><a name="p13603531378"></a>created</p>
@@ -143,23 +164,26 @@ N/A。
 **响应示例**
 
 ```
-[ 
-  { 
-    "id":0,
-    "repo_id":0,
-    "Tag": "0.1", 
-    "image_id": "cc1b614067128cd2f5cdafb258b0a4dd25760f14562bcce516c13f760c3b79c4",
-    "digest":"sha256:9f9fa8898be6bf4afd1a9f1a2ddd8dffd1d08683a463ffdbe00c57e5d5ff65fb",
-    "schema": 2, 
-    "path": "10.67.146.152:8990/juzhen/busybox:0.1",
-    "internal_path": "", 
-    "size": 2099575,
-    "is_trusted": false, 
-    "created": "2017-04-08T14:12:23Z", 
-    "updated": "2017-04-13T21:01:11Z", 
+
+
+[{
+
+    "id": 0,
+    "repo_id": 0,
+    "Tag": "latest",
+    "image_id": "741f24a795d6d93d7c6edd11780d63c13e16c39615dd9d223378a57a836f2ee6",
+    "manifest": "{\"schemaVersion\":2,\"mediaType\":\"application/vnd.docker.distribution.manifest.v2+json\",\"config\":{\"mediaType\":\"application/vnd.docker.container.image.v1+json\",\"size\":1862,\"digest\":\"sha256:741f24a795d6d93d7c6edd11780d63c13e16c39615dd9d223378a57a836f2ee6\"},\"layers\":[{\"mediaType\":\"application/vnd.docker.image.rootfs.diff.tar.gzip\",\"size\":1292800,\"digest\":\"sha256:8ac8bfaff55af948c796026ee867448c5b5b5d9dd3549f4006d9759b25d4a893\"},{\"mediaType\":\"application/vnd.docker.image.rootfs.diff.tar.gzip\",\"size\":10240,\"digest\":\"sha256:77ddbf3a9fe11e81761a0f9df43a28e3e6f29bbb53c0c8cf71cd7efa69729aed\"}]}",
+    "digest": "sha256:57b605845a6367c34bfb6ea6477f16852f59aa1861a2b51d10ab77ae0a1dc9c3",
+    "schema": 2,
+    "path": "swr.cn-north-1.myhuaweicloud.com/namespace/busybox:latest",
+    "internal_path": "10.125.0.198:20202/namespace/busybox:latest",
+    "size": 1304902,
+    "is_trusted": false,
+    "created": "2018-07-06T06:18:55Z",
+    "updated": "2018-07-06T06:18:55Z",
     "deleted": null
-  } 
-]
+}]
+
 ```
 
 ## 状态码<a name="section5365169104253"></a>

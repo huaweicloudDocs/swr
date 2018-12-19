@@ -15,31 +15,31 @@ DELETE /v2/manage/namespaces/\{namespace\}/repos/\{repository\}/tags/\{tag\}
 <a name="table05962819187"></a>
 <table><thead align="left"><tr id="row18599289181"><th class="cellrowborder" valign="top" width="32.29%" id="mcps1.2.4.1.1"><p id="p145942820183"><a name="p145942820183"></a><a name="p145942820183"></a>参数名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="24.14%" id="mcps1.2.4.1.2"><p id="p2412385190"><a name="p2412385190"></a><a name="p2412385190"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="33.300000000000004%" id="mcps1.2.4.1.2"><p id="p2412385190"><a name="p2412385190"></a><a name="p2412385190"></a>是否必选</p>
 </th>
-<th class="cellrowborder" valign="top" width="43.57%" id="mcps1.2.4.1.3"><p id="p205910283185"><a name="p205910283185"></a><a name="p205910283185"></a>描述</p>
+<th class="cellrowborder" valign="top" width="34.410000000000004%" id="mcps1.2.4.1.3"><p id="p205910283185"><a name="p205910283185"></a><a name="p205910283185"></a>描述</p>
 </th>
 </tr>
 </thead>
 <tbody><tr id="row146018284188"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p0601928131816"><a name="p0601928131816"></a><a name="p0601928131816"></a>namespace</p>
 </td>
-<td class="cellrowborder" valign="top" width="24.14%" headers="mcps1.2.4.1.2 "><p id="p1541218191918"><a name="p1541218191918"></a><a name="p1541218191918"></a>是</p>
+<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p1541218191918"><a name="p1541218191918"></a><a name="p1541218191918"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.57%" headers="mcps1.2.4.1.3 "><p id="p1960112891813"><a name="p1960112891813"></a><a name="p1960112891813"></a>命名空间名称，只支持大小写字母开头，后面跟大小写字母、数字、下划线或横线，1-255个字符</p>
+<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p1960112891813"><a name="p1960112891813"></a><a name="p1960112891813"></a>命名空间名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-64个字符。</p>
 </td>
 </tr>
 <tr id="row1160152816186"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p206018288188"><a name="p206018288188"></a><a name="p206018288188"></a>repository</p>
 </td>
-<td class="cellrowborder" valign="top" width="24.14%" headers="mcps1.2.4.1.2 "><p id="p5412986190"><a name="p5412986190"></a><a name="p5412986190"></a>是</p>
+<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p5412986190"><a name="p5412986190"></a><a name="p5412986190"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.57%" headers="mcps1.2.4.1.3 "><p id="p11611528111811"><a name="p11611528111811"></a><a name="p11611528111811"></a>repository名称，仅支持大小写字母或数字开头，后面跟大小写字母、数字、下划线或横线，1-255个字符</p>
+<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p11611528111811"><a name="p11611528111811"></a><a name="p11611528111811"></a>repository名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-128个字符。</p>
 </td>
 </tr>
 <tr id="row7611288187"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p761728131819"><a name="p761728131819"></a><a name="p761728131819"></a>tag</p>
 </td>
-<td class="cellrowborder" valign="top" width="24.14%" headers="mcps1.2.4.1.2 "><p id="p441212891913"><a name="p441212891913"></a><a name="p441212891913"></a>是</p>
+<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p441212891913"><a name="p441212891913"></a><a name="p441212891913"></a>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="43.57%" headers="mcps1.2.4.1.3 "><p id="p261202814184"><a name="p261202814184"></a><a name="p261202814184"></a>数字、字母或下划线开头，后面跟数字、字母、下划线、点、短横线，最长128个字符</p>
+<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p261202814184"><a name="p261202814184"></a><a name="p261202814184"></a>数字、字母或下划线开头，后面跟数字、字母、下划线、点、短横线，最长128个字符</p>
 </td>
 </tr>
 </tbody>
