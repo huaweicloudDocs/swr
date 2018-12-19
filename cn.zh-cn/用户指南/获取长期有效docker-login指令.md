@@ -13,7 +13,7 @@
         **图 1**  区域与项目<a name="fig1548146070"></a>  
         ![](figures/区域与项目.png "区域与项目")
 
-        镜像仓库地址为 : swr.区域项目名称.myhuaweicloud.com，如中国华北区1对应的镜像仓库地址为swr.cn-north-1myhuaweicloud.com。
+        镜像仓库地址为 : swr.区域项目名称.myhuaweicloud.com，如中国华北区1对应的镜像仓库地址为swr.cn-north-1.myhuaweicloud.com。
 
 
 2.  <a name="li1863783911295"></a>获取AK/SK访问密钥。
