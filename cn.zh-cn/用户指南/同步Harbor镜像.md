@@ -155,7 +155,7 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
         </tbody>
         </table>
 
-    2.  执行以下命令运行容器。
+    2.  在app.conf所在目录下，执行以下命令运行容器。
 
         ```
         docker run -d --privileged=true -v /var:/var -p #swr-harbor_sync_tool服务暴露的主机端口#:5000 --env-file=#前文配置文件的路径# --restart=always #刚刚下载的镜像名#:#刚刚下载的镜像tag#
@@ -187,13 +187,13 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
 
         请将10.10.10.10:19876更换为部署swr-harbor\_sync\_tool服务所在的主机ip（请勿使用127.0.0.1作为IP，请使用宿主机IP或域名）以及服务在主机实际暴露的端口。
 
-        请确保新增配置格式正确，即和默认的endpoint格式完全一致（行前空格的差异也可能会导致harbor无法正常重新启动），如下图所示：
+        请确保新增配置格式正确，即和默认的endpoint格式完全一致对齐（行前空格的差异会导致harbor无法正常重新启动），如下图所示：
 
         ![](figures/notifications.png)
 
     2.  重新启动harbor服务。
 
-        在harbor安装目录中，使用./install.sh命令启动harbor。
+        在harbor安装目录中，使用./install.sh命令启动harbor。请确认harbor服务启动后是否正常运行：使用docker ps指令确认所有的harbor容器都是up状态。
 
 
 
