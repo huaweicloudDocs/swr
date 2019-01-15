@@ -5,21 +5,43 @@
 可访问harbor仓库的用户节点执行以下命令下载harbor同步工具镜像。
 
 ```
-docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
+docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
 ```
 
 ## 配置及运行<a name="section114091421195814"></a>
 
-1.  配置docker daemon。
-    1.  开启docker remote api，可以接受swr-harbor\_sync\_tool服务的请求，配置方式如下：
-
-        在docker配置文件（CentOS/Red Hat系统通常为/etc/sysconfig/docker,Ubuntu系统通常为/etc/default/docker）中增加 OPTIONS='-H=tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock'
-
-    2.  如果harbor开启的为http而非https，或者开启的是https但未在docker主机上安装https证书，则需要配置如下信息：
+1.  配置docker daemon。（配置文件目录通常为/lib/systemd/system/docker.service）
+    1.  开启docker remote api，可以接受swr-harbor\_sync\_tool服务的请求，在配置文件的ExecStart选项中添加如下：
 
         ```
-        INSECURE_REGISTRY='--insecure-registry=#harbor服务器的域名或IP#'
+        -H=tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
         ```
+
+        请确保前一个配置项末尾有 \\ 符号，如下图所示：
+
+        ![](figures/insecure.png)
+
+    2.  如果harbor开启的为http而非https，或者开启的是https但未在docker主机上安装https证书，在配置文件的ExecStart选项中添加如下：
+
+        ```
+        --insecure-registry=#harbor服务器的域名或IP#
+        ```
+
+        示例：
+
+        ```
+        --insecure-registry=10.10.10.10
+        ```
+
+        请确保前一个配置项末尾有 \\ 符号，如下图所示：
+
+        ![](figures/realinsecure.png)
+
+        请确认/etc/docker/daemon.json文件中是否存在insecure-registries配置项。如果存在，需要确保/lib/systemd/system/docker.service的insecure-registry配置项中的ip和/etc/docker/daemon.json的insecure-registries配置项中的ip是完全一致的。
+
+        /lib/systemd/system/docker.service中多个insecure-registry需要按下图格式配置：
+
+        ![](figures/moreinsecure.png)
 
     3.  重启docker服务，执行如下命令。
 
@@ -28,7 +50,7 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
         systemctl restart docker
         ```
 
-        若执行以上命令无法启动重启docker服务，可执行service docker restart命令，重启docker服务。
+        若执行systemctl restart docker命令无法启动重启docker服务，可执行service docker restart命令，重启docker服务。
 
     4.  确认参数是否生效 。
         1.  执行以下命令，查看docker进程。
@@ -43,7 +65,11 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
             --insecure-registry=harobr服务器域名或ip -H=tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
             ```
 
-            如果含有上述参数，则说明配置成功；如果未带上述参数，请访问[https://www.jianshu.com/p/2556a1c5d45d](https://www.jianshu.com/p/2556a1c5d45d)，查看解决方法。
+            如下图所示：
+
+            ![](figures/ps-ef.png)
+
+            如果含有上述参数，则说明配置成功。
 
 
 
@@ -52,7 +78,7 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
 
         ```
         ImageOverwrite=false
-        NamespaceMap=library:domain_library;what:mangomango
+        NamespaceMap=harbor_project1:swr_namespace1;harbor_project2:swr_namespace2
         HWDomain=sunXXXXXX
         HWUser=XXXXXX
         HWPassword=XXXXXXX
@@ -81,8 +107,8 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
         <tr id="row175851643578"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p17585643079"><a name="p17585643079"></a><a name="p17585643079"></a>NamespaceMap</p>
         </td>
         <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p175851843272"><a name="p175851843272"></a><a name="p175851843272"></a>自动同步镜像所对应的harbor projectname与华为swr namespace。</p>
-        <p id="p6778182481010"><a name="p6778182481010"></a><a name="p6778182481010"></a>配置格式：harbor porjectname;华为swr namespace，两个键值对之间用;分隔。</p>
-        <p id="p4801849694"><a name="p4801849694"></a><a name="p4801849694"></a>例如：library:domain_library;what:mangomango</p>
+        <p id="p6778182481010"><a name="p6778182481010"></a><a name="p6778182481010"></a>配置格式：harbor porjectname:华为swr namespace；若存在多组配置项，键值对之间用;分隔。</p>
+        <p id="p4801849694"><a name="p4801849694"></a><a name="p4801849694"></a>例如：harbor_project1:swr_namespace1;harbor_project2:swr_namespace2</p>
         </td>
         </tr>
         <tr id="row1158514318717"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p35859431679"><a name="p35859431679"></a><a name="p35859431679"></a>HWDomain</p>
@@ -132,17 +158,17 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
     2.  执行以下命令运行容器。
 
         ```
-        docker run -d --privileged=true -v /var:/var -p #swr-harbor_sync_tool服务暴露的主机端口#:5000 --env-file=#前文配置文件的路径#  #刚刚下载的镜像名#:#刚刚下载的镜像tag#
+        docker run -d --privileged=true -v /var:/var -p #swr-harbor_sync_tool服务暴露的主机端口#:5000 --env-file=#前文配置文件的路径# --restart=always #刚刚下载的镜像名#:#刚刚下载的镜像tag#
         ```
 
         示例：
 
         ```
-        docker run -d --privileged=true -v /var:/var -p 19876:5000 --env-file=app.conf swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
+        docker run -d --privileged=true -v /var:/var -p 19876:5000 --env-file=app.conf --restart=always swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
         ```
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >请确保harbor服务为启动状态；若未启动，在harbor安装目录中，使用./install命令启动harbor。  
+        >请确保harbor服务为启动状态；若未启动，在harbor安装目录中，使用./install.sh命令启动harbor。  
 
         容器运行日志路径：/var/log/swr\_harbor\_sync，其中projectname-success.log为记录成功同步的日志，其他日志为运行日志。
 
@@ -151,17 +177,24 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
     1.  在harbor/common/templates/registry/config.yml中的notifications的endpoints下，新增一个endpoint，格式如下：
 
         ```
-        -name：swr-harbor_sync_tool
-           disabled：false
-           url：##swr-harbor_sync_tool服务的IP##:##swr-harbor_sync_tool服务的PORT##/service/notifications
-           timeout：3000ms
-           threshold：5
-           backoff：1s
+          - name: swr-harbor_sync_tool
+            disabled: false
+            url: http://10.10.10.10:19876/service/notifications
+            timeout: 3000ms
+            threshold: 5
+            backoff: 1s
         ```
 
-        URL示例：10.10.10.10:19876/service/notifications，请勿使用127.0.0.1作为IP，请使用宿主机IP或域名。
+        请将10.10.10.10:19876更换为部署swr-harbor\_sync\_tool服务所在的主机ip（请勿使用127.0.0.1作为IP，请使用宿主机IP或域名）以及服务在主机实际暴露的端口。
+
+        请确保新增配置格式正确，即和默认的endpoint格式完全一致（行前空格的差异也可能会导致harbor无法正常重新启动），如下图所示：
+
+        ![](figures/notifications.png)
 
     2.  重新启动harbor服务。
+
+        在harbor安装目录中，使用./install.sh命令启动harbor。
+
 
 
 ## 如何使用swr-harbor\_sync\_tool<a name="section828111971919"></a>
@@ -188,13 +221,13 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v1.0
     -   接口如下（curl指令形式）：
 
         ```
-        curl -X POST -H 'Projectname:##harbor项目名##' -H 'Namespace:##华为swr命名空间##' -H 'HarborUser:##harbor用户名##' -H 'HarborPassword:##harbor密码##' -H 'HWDomain:##华为云租户名##' -H 'HWUser:#华为云账号名#' -H 'HWPassword:##华为云租户或账号密码##' -H 'RegionName:##华为云区域名##' -H 'ImageOverwrite:##重名镜像是否覆盖##' http://##部署swr-harbor_sync_tool节点的IP##:##部署swr-harbor_sync_tool的PORT##/service/synchronization/namespace
+        curl -X POST -H 'Projectname:##harbor项目名##' -H 'Namespace:##华为swr命名空间##' -H 'HarborUser:##harbor用户名##' -H 'HarborPassword:##harbor密码##' -H 'HWDomain:##华为云租户名##' -H 'HWUser:#华为云账号名#' -H 'HWPassword:##华为云租户或账号密码##' -H 'RegionName:##华为云区域名##' -H 'ImageOverwrite:##重名镜像是否覆盖，可选true或者false##' http://##部署swr-harbor_sync_tool节点的IP##:##部署swr-harbor_sync_tool的PORT##/service/synchronization/namespace
         ```
 
-    -   用例如下：
+    -   示例：
 
         ```
-        curl -X POST -H 'Projectname:library' -H 'Namespace:domain_library' -H 'HarborUser:admin' -H 'HarborPassword:******' -H 'HWDomain:abcXXX' -H 'HWUser:bbbXXX' -H 'HWPassword:xyzXXX' -H 'RegionName:cn-north-1' -H 'ImageOverwrite:false' http://127.0.0.1:19876/service/synchronization/namespace
+        curl -X POST -H 'Projectname:harbor_project_name' -H 'Namespace:huaweicloud_namespace_name' -H 'HarborUser:harbor_user' -H 'HarborPassword:harbor_password' -H 'HWDomain:huaweicloud_domain_name' -H 'HWUser:huaweicloud_user_name' -H 'HWPassword:huaweicloud_password' -H 'RegionName:cn-north-1' -H 'ImageOverwrite:false' http://127.0.0.1:19876/service/synchronization/namespace
         ```
 
         1.  swr-harbor\_sync\_tool服务收到请求后，会确认library是否为公有项目。
