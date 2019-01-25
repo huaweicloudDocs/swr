@@ -5,10 +5,10 @@
 可访问harbor仓库的用户节点执行以下命令下载harbor同步工具镜像。
 
 ```
-docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
+docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v3.0
 ```
 
-## 配置及运行<a name="section114091421195814"></a>
+## 配置及运行<a name="section939563715224"></a>
 
 1.  配置docker daemon。（配置文件目录通常为/lib/systemd/system/docker.service）
     1.  开启docker remote api，可以接受swr-harbor\_sync\_tool服务的请求，在配置文件的ExecStart选项中添加如下：
@@ -79,6 +79,9 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
         ```
         ImageOverwrite=false
         NamespaceMap=harbor_project1:swr_namespace1;harbor_project2:swr_namespace2
+        HWAuthMethod=AKSK
+        HWAK=XXXXXXXXXXXXX
+        HWSK=XXXXXXXXXXXXXXXXXXXXX
         HWDomain=sunXXXXXX
         HWUser=XXXXXX
         HWPassword=XXXXXXX
@@ -109,6 +112,21 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
         <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p175851843272"><a name="p175851843272"></a><a name="p175851843272"></a>自动同步镜像所对应的harbor projectname与华为swr namespace。</p>
         <p id="p6778182481010"><a name="p6778182481010"></a><a name="p6778182481010"></a>配置格式：harbor porjectname:华为swr namespace；若存在多组配置项，键值对之间用;分隔。</p>
         <p id="p4801849694"><a name="p4801849694"></a><a name="p4801849694"></a>例如：harbor_project1:swr_namespace1;harbor_project2:swr_namespace2</p>
+        </td>
+        </tr>
+        <tr id="row6726185334714"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p2072665316478"><a name="p2072665316478"></a><a name="p2072665316478"></a>HWAuthMethod</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p1672615314477"><a name="p1672615314477"></a><a name="p1672615314477"></a>可选AKSK、Password。如果是AKSK则使用HWAK、HWSK进行华为云鉴权；如果是Password，则使用HWDmain、HWUser、HWPassword进行华为云鉴权</p>
+        </td>
+        </tr>
+        <tr id="row968815014713"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p10688105084712"><a name="p10688105084712"></a><a name="p10688105084712"></a>HWAK</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p1668818502474"><a name="p1668818502474"></a><a name="p1668818502474"></a>华为云AK</p>
+        </td>
+        </tr>
+        <tr id="row139751944114713"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p9975244134719"><a name="p9975244134719"></a><a name="p9975244134719"></a>HWSK</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p59758447474"><a name="p59758447474"></a><a name="p59758447474"></a>华为云SK</p>
         </td>
         </tr>
         <tr id="row1158514318717"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p35859431679"><a name="p35859431679"></a><a name="p35859431679"></a>HWDomain</p>
@@ -164,13 +182,13 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
         示例：
 
         ```
-        docker run -d --privileged=true -v /var:/var -p 19876:5000 --env-file=app.conf --restart=always swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
+        docker run -d --privileged=true -v /var/log:/var/log -p 19876:5000 --env-file=app.conf --restart=always swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v3.0
         ```
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >请确保harbor服务为启动状态；若未启动，在harbor安装目录中，使用./install.sh命令启动harbor。  
 
-        容器运行日志路径：/var/log/swr\_harbor\_sync，其中projectname-success.log为记录成功同步的日志，其他日志为运行日志。
+        容器运行日志路径：/var/log/swr\_harbor\_sync，其中running.log为服务运行日志，projectname-running.log为记录对应projectname的harbor项目同步情况的日志，projectname-success.log记录对应projectname的harbor项目同步成功的日志。如果app.conf中的配置信息有误，请修改配置文件，并停止刚刚启动的容器后，重新运行一个新容器。
 
 
 3.  配置harbor服务。
@@ -221,20 +239,20 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
     -   接口如下（curl指令形式）：
 
         ```
-        curl -X POST -H 'Projectname:##harbor项目名##' -H 'Namespace:##华为swr命名空间##' -H 'HarborUser:##harbor用户名##' -H 'HarborPassword:##harbor密码##' -H 'HWDomain:##华为云租户名##' -H 'HWUser:#华为云账号名#' -H 'HWPassword:##华为云租户或账号密码##' -H 'RegionName:##华为云区域名##' -H 'ImageOverwrite:##重名镜像是否覆盖，可选true或者false##' http://##部署swr-harbor_sync_tool节点的IP##:##部署swr-harbor_sync_tool的PORT##/service/synchronization/namespace
+        curl -X POST -H 'Projectname:##harbor项目名##' -H 'Namespace:##华为swr命名空间##' -H 'HarborUser:##harbor用户名##' -H 'HarborPassword:##harbor密码##' -H 'HWAuthMethod:##华为云认证方式##' -H 'HWAK:##华为云AK##' -H 'HWSK:##华为云SK##' -H 'HWDomain:##华为云租户名##' -H 'HWUser:#华为云账号名#' -H 'HWPassword:##华为云租户或账号密码##' -H 'RegionName:##华为云区域名##' -H 'ImageOverwrite:##重名镜像是否覆盖，可选true或者false##' http://##部署swr-harbor_sync_tool节点的IP##:##部署swr-harbor_sync_tool的PORT##/service/synchronization/namespace
         ```
 
     -   示例：
 
         ```
-        curl -X POST -H 'Projectname:harbor_project_name' -H 'Namespace:huaweicloud_namespace_name' -H 'HarborUser:harbor_user' -H 'HarborPassword:harbor_password' -H 'HWDomain:huaweicloud_domain_name' -H 'HWUser:huaweicloud_user_name' -H 'HWPassword:huaweicloud_password' -H 'RegionName:cn-north-1' -H 'ImageOverwrite:false' http://127.0.0.1:19876/service/synchronization/namespace
+        curl -X POST -H 'Projectname:harbor_project_name' -H 'Namespace:huaweicloud_namespace_name' -H 'HarborUser:harbor_user' -H 'HarborPassword:harbor_password' -H 'HWAuthMethod:huawei_auth_method' -H 'HWAK:huawei_ak' -H 'HWSK:huawei_sk' -H 'HWDomain:huaweicloud_domain_name' -H 'HWUser:huaweicloud_user_name' -H 'HWPassword:huaweicloud_password' -H 'RegionName:cn-north-1' -H 'ImageOverwrite:false' http://127.0.0.1:19876/service/synchronization/namespace
         ```
 
         1.  swr-harbor\_sync\_tool服务收到请求后，会确认library是否为公有项目。
             -   如果为公有项目，则不对harbor账号密码鉴权。
             -   如果是私有项目，则对harbor账号密码（admin：\*\*\*\*\*\*）鉴权。
 
-        2.  如果HWUser为空，则对华为云租户及租户密码（abcXXX：xyzXXX）鉴权；如果HWUser非空，则对华为云租户、账号及账户密码（abcXXX：bbbXXX：xyzXXX）鉴权；并确认RegionName和Namespace是否可用。
+        2.  如果HWAuthMethod为AKSK，则获取HWAK、HWSK进行权限认证；如果HWAuthMethod为Password，则判断如果HWUser为空，则对华为云租户及租户密码（abcXXX：xyzXXX）鉴权；如果HWUser非空，则对华为云租户、账号及账户密码（abcXXX：bbbXXX：xyzXXX）鉴权；并确认RegionName和Namespace是否可用。
 
             当这些都确认正确后，swr-harbor\_sync\_tool服务会将harbor中library这个project内的所有镜像，全部同步到华为云该租户下的（cn-north-1）区域的镜像仓库内的namespace（domain\_library）中，且由于ImageOverwrite设置为false，则不会覆盖原有的同名镜像。
 
@@ -253,5 +271,5 @@ docker pull swr.cn-north-1.myhuaweicloud.com/swr/swr_harbor_sync:v2.0
 5.  harbor账号密码错误。
 6.  运行工具的节点无法访问harbor或者swr，网络不通。
 
-如未成功同步，请在/var/log/swr\_harbor\_sync目录下的日志文件中查看失败原因。
+如未成功同步，请在/var/log/swr\_harbor\_sync目录下的对应projectname的projectname-running.log日志文件中查看失败原因。如未发现错误信息，请确认配置及运行的步骤1和3是否正确配置。
 
