@@ -2,7 +2,7 @@
 
 ## 功能介绍<a name="section14905762191056"></a>
 
-获取镜像的tag的列表。
+查询某一个镜像的所有镜像版本。
 
 ## URI<a name="section10482810165331"></a>
 
@@ -13,26 +13,32 @@ GET /v2/manage/namespaces/\{namespace\}/repos/\{repository\}/tags
 **表 1**  参数说明
 
 <a name="table11843162810214"></a>
-<table><thead align="left"><tr id="row20843172818213"><th class="cellrowborder" valign="top" width="30.61%" id="mcps1.2.4.1.1"><p id="p3843528621"><a name="p3843528621"></a><a name="p3843528621"></a>参数名称</p>
+<table><thead align="left"><tr id="row20843172818213"><th class="cellrowborder" valign="top" width="17.26%" id="mcps1.2.5.1.1"><p id="p3843528621"><a name="p3843528621"></a><a name="p3843528621"></a>参数名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="33.4%" id="mcps1.2.4.1.2"><p id="p1384319283210"><a name="p1384319283210"></a><a name="p1384319283210"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="15.870000000000001%" id="mcps1.2.5.1.2"><p id="p15022419437"><a name="p15022419437"></a><a name="p15022419437"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="35.99%" id="mcps1.2.4.1.3"><p id="p1584342811211"><a name="p1584342811211"></a><a name="p1584342811211"></a>描述</p>
+<th class="cellrowborder" valign="top" width="15.950000000000001%" id="mcps1.2.5.1.3"><p id="p1450315424313"><a name="p1450315424313"></a><a name="p1450315424313"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="50.92%" id="mcps1.2.5.1.4"><p id="p1584342811211"><a name="p1584342811211"></a><a name="p1584342811211"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1084316281925"><td class="cellrowborder" valign="top" width="30.61%" headers="mcps1.2.4.1.1 "><p id="p6843228526"><a name="p6843228526"></a><a name="p6843228526"></a>namespace</p>
+<tbody><tr id="row1084316281925"><td class="cellrowborder" valign="top" width="17.26%" headers="mcps1.2.5.1.1 "><p id="p6843228526"><a name="p6843228526"></a><a name="p6843228526"></a>namespace</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.4%" headers="mcps1.2.4.1.2 "><p id="p284310281826"><a name="p284310281826"></a><a name="p284310281826"></a>否</p>
+<td class="cellrowborder" valign="top" width="15.870000000000001%" headers="mcps1.2.5.1.2 "><p id="p105058419438"><a name="p105058419438"></a><a name="p105058419438"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.99%" headers="mcps1.2.4.1.3 "><p id="p85037015469"><a name="p85037015469"></a><a name="p85037015469"></a>组织名称</p>
+<td class="cellrowborder" valign="top" width="15.950000000000001%" headers="mcps1.2.5.1.3 "><p id="p10507114164313"><a name="p10507114164313"></a><a name="p10507114164313"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.92%" headers="mcps1.2.5.1.4 "><p id="p85037015469"><a name="p85037015469"></a><a name="p85037015469"></a>组织名称</p>
 </td>
 </tr>
-<tr id="row1319321944420"><td class="cellrowborder" valign="top" width="30.61%" headers="mcps1.2.4.1.1 "><p id="p919315194441"><a name="p919315194441"></a><a name="p919315194441"></a>repository</p>
+<tr id="row1319321944420"><td class="cellrowborder" valign="top" width="17.26%" headers="mcps1.2.5.1.1 "><p id="p919315194441"><a name="p919315194441"></a><a name="p919315194441"></a>repository</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.4%" headers="mcps1.2.4.1.2 "><p id="p17193161964410"><a name="p17193161964410"></a><a name="p17193161964410"></a>否</p>
+<td class="cellrowborder" valign="top" width="15.870000000000001%" headers="mcps1.2.5.1.2 "><p id="p546292854514"><a name="p546292854514"></a><a name="p546292854514"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.99%" headers="mcps1.2.4.1.3 "><p id="p13193201924411"><a name="p13193201924411"></a><a name="p13193201924411"></a>镜像仓库名称</p>
+<td class="cellrowborder" valign="top" width="15.950000000000001%" headers="mcps1.2.5.1.3 "><p id="p15466162817454"><a name="p15466162817454"></a><a name="p15466162817454"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.92%" headers="mcps1.2.5.1.4 "><p id="p13193201924411"><a name="p13193201924411"></a><a name="p13193201924411"></a>镜像仓库名称</p>
 </td>
 </tr>
 </tbody>
@@ -164,8 +170,6 @@ N/A。
 **响应示例**
 
 ```
-
-
 [{
 
     "id": 0,

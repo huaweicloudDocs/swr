@@ -13,33 +13,41 @@ DELETE /v2/manage/namespaces/\{namespace\}/repos/\{repository\}/tags/\{tag\}
 **表 1**  参数说明
 
 <a name="table05962819187"></a>
-<table><thead align="left"><tr id="row18599289181"><th class="cellrowborder" valign="top" width="32.29%" id="mcps1.2.4.1.1"><p id="p145942820183"><a name="p145942820183"></a><a name="p145942820183"></a>参数名称</p>
+<table><thead align="left"><tr id="row18599289181"><th class="cellrowborder" valign="top" width="16.830000000000002%" id="mcps1.2.5.1.1"><p id="p145942820183"><a name="p145942820183"></a><a name="p145942820183"></a>参数名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="33.300000000000004%" id="mcps1.2.4.1.2"><p id="p2412385190"><a name="p2412385190"></a><a name="p2412385190"></a>是否必选</p>
+<th class="cellrowborder" valign="top" width="13.950000000000001%" id="mcps1.2.5.1.2"><p id="p15022419437"><a name="p15022419437"></a><a name="p15022419437"></a>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="34.410000000000004%" id="mcps1.2.4.1.3"><p id="p205910283185"><a name="p205910283185"></a><a name="p205910283185"></a>描述</p>
+<th class="cellrowborder" valign="top" width="15.52%" id="mcps1.2.5.1.3"><p id="p1450315424313"><a name="p1450315424313"></a><a name="p1450315424313"></a>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="53.7%" id="mcps1.2.5.1.4"><p id="p205910283185"><a name="p205910283185"></a><a name="p205910283185"></a>描述</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row146018284188"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p0601928131816"><a name="p0601928131816"></a><a name="p0601928131816"></a>namespace</p>
+<tbody><tr id="row146018284188"><td class="cellrowborder" valign="top" width="16.830000000000002%" headers="mcps1.2.5.1.1 "><p id="p0601928131816"><a name="p0601928131816"></a><a name="p0601928131816"></a>namespace</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p1541218191918"><a name="p1541218191918"></a><a name="p1541218191918"></a>是</p>
+<td class="cellrowborder" valign="top" width="13.950000000000001%" headers="mcps1.2.5.1.2 "><p id="p105058419438"><a name="p105058419438"></a><a name="p105058419438"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p1960112891813"><a name="p1960112891813"></a><a name="p1960112891813"></a>命名空间名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-64个字符。</p>
+<td class="cellrowborder" valign="top" width="15.52%" headers="mcps1.2.5.1.3 "><p id="p10507114164313"><a name="p10507114164313"></a><a name="p10507114164313"></a>是</p>
 </td>
-</tr>
-<tr id="row1160152816186"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p206018288188"><a name="p206018288188"></a><a name="p206018288188"></a>repository</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p5412986190"><a name="p5412986190"></a><a name="p5412986190"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p11611528111811"><a name="p11611528111811"></a><a name="p11611528111811"></a>repository名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-128个字符。</p>
+<td class="cellrowborder" valign="top" width="53.7%" headers="mcps1.2.5.1.4 "><p id="p1960112891813"><a name="p1960112891813"></a><a name="p1960112891813"></a>命名空间名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-64个字符。</p>
 </td>
 </tr>
-<tr id="row7611288187"><td class="cellrowborder" valign="top" width="32.29%" headers="mcps1.2.4.1.1 "><p id="p761728131819"><a name="p761728131819"></a><a name="p761728131819"></a>tag</p>
+<tr id="row1160152816186"><td class="cellrowborder" valign="top" width="16.830000000000002%" headers="mcps1.2.5.1.1 "><p id="p206018288188"><a name="p206018288188"></a><a name="p206018288188"></a>repository</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.300000000000004%" headers="mcps1.2.4.1.2 "><p id="p441212891913"><a name="p441212891913"></a><a name="p441212891913"></a>是</p>
+<td class="cellrowborder" valign="top" width="13.950000000000001%" headers="mcps1.2.5.1.2 "><p id="p391915406456"><a name="p391915406456"></a><a name="p391915406456"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" width="34.410000000000004%" headers="mcps1.2.4.1.3 "><p id="p261202814184"><a name="p261202814184"></a><a name="p261202814184"></a>数字、字母或下划线开头，后面跟数字、字母、下划线、点、短横线，最长128个字符</p>
+<td class="cellrowborder" valign="top" width="15.52%" headers="mcps1.2.5.1.3 "><p id="p18920840134520"><a name="p18920840134520"></a><a name="p18920840134520"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.7%" headers="mcps1.2.5.1.4 "><p id="p11611528111811"><a name="p11611528111811"></a><a name="p11611528111811"></a>repository名称，小写字母开头，后面跟小写字母、数字、下划线或中划线（其中下划线最多允许连续两个，并且不能直接与中划线相连），小写字母或数字结尾，1-128个字符。</p>
+</td>
+</tr>
+<tr id="row7611288187"><td class="cellrowborder" valign="top" width="16.830000000000002%" headers="mcps1.2.5.1.1 "><p id="p761728131819"><a name="p761728131819"></a><a name="p761728131819"></a>tag</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.950000000000001%" headers="mcps1.2.5.1.2 "><p id="p623464254512"><a name="p623464254512"></a><a name="p623464254512"></a>string</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.52%" headers="mcps1.2.5.1.3 "><p id="p923624264510"><a name="p923624264510"></a><a name="p923624264510"></a>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.7%" headers="mcps1.2.5.1.4 "><p id="p261202814184"><a name="p261202814184"></a><a name="p261202814184"></a>数字、字母或下划线开头，后面跟数字、字母、下划线、点、短横线，最长128个字符</p>
 </td>
 </tr>
 </tbody>
