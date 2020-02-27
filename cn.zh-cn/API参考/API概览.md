@@ -131,6 +131,26 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p20526774204"><a name="p20526774204"></a><a name="p20526774204"></a>获取镜像加速器地址。</p>
 </td>
 </tr>
+<tr id="row1681441205812"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p5814416584"><a name="p5814416584"></a><a name="p5814416584"></a><a href="创建组织权限.md">创建组织权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p781417135817"><a name="p781417135817"></a><a name="p781417135817"></a>创建组织权限。</p>
+</td>
+</tr>
+<tr id="row281418165819"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p481431145812"><a name="p481431145812"></a><a name="p481431145812"></a><a href="删除组织权限.md">删除组织权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1681441175818"><a name="p1681441175818"></a><a name="p1681441175818"></a>删除组织权限。</p>
+</td>
+</tr>
+<tr id="row12814917588"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p18147113583"><a name="p18147113583"></a><a name="p18147113583"></a><a href="更新组织权限.md">更新组织权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1081410110585"><a name="p1081410110585"></a><a name="p1081410110585"></a>更新组织权限。</p>
+</td>
+</tr>
+<tr id="row15903376582"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p89031771584"><a name="p89031771584"></a><a name="p89031771584"></a><a href="查询组织权限.md">查询组织权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p17903278585"><a name="p17903278585"></a><a name="p17903278585"></a>查询组织权限。</p>
+</td>
+</tr>
 </tbody>
 </table>
 
