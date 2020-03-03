@@ -105,7 +105,7 @@ N/A
             "id": "v2",
             "links": [
                 {
-                    "href": "https://xxxx.otc.t-systems.com/v2/",
+                    "href": "https://swr-api.xxxx.myhuaweicloud.com/v2/",
                     "rel": "self"
                 }
             ],
