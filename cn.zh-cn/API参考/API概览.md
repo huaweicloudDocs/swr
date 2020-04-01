@@ -66,6 +66,11 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p8165140173719"><a name="p8165140173719"></a><a name="p8165140173719"></a>删除镜像仓库中指定tag的镜像。</p>
 </td>
 </tr>
+<tr id="row16259104105216"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p122608416524"><a name="p122608416524"></a><a name="p122608416524"></a><a href="生成docker-login指令.md">生成docker login指令</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p64081653142219"><a name="p64081653142219"></a><a name="p64081653142219"></a>通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成docker login指令。</p>
+</td>
+</tr>
 <tr id="row1996444614579"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p18964164619574"><a name="p18964164619574"></a><a name="p18964164619574"></a><a href="查询官方镜像列表.md">查询官方镜像列表</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p10964114655716"><a name="p10964114655716"></a><a name="p10964114655716"></a>查询官方镜像列表。容器镜像服务为您提供大量的公有镜像资源检索，包括docker官方镜像资源。您可以收藏这些镜像并推送到自己的仓库之中，方便使用。</p>
