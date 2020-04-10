@@ -1,4 +1,4 @@
-# 生成docker login指令<a name="ZH-CN_TOPIC_0233790087"></a>
+# 生成docker login指令<a name="swr_02_0052"></a>
 
 ## 功能介绍<a name="section14905762191056"></a>
 
@@ -25,27 +25,27 @@ POST /v2/manage/utils/secret?projectname=\{projectname\}&ak=\{ak\}&sk=\{sk\}
 </thead>
 <tbody><tr id="row146018284188"><td class="cellrowborder" valign="top" width="15.68%" headers="mcps1.2.5.1.1 "><p id="p10585203891316"><a name="p10585203891316"></a><a name="p10585203891316"></a>projectname</p>
 </td>
-<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p858503851314"><a name="p858503851314"></a><a name="p858503851314"></a>string</p>
+<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p198322817174"><a name="p198322817174"></a><a name="p198322817174"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p16585238151315"><a name="p16585238151315"></a><a name="p16585238151315"></a>否</p>
+<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p19795113419177"><a name="p19795113419177"></a><a name="p19795113419177"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p1658514381137"><a name="p1658514381137"></a><a name="p1658514381137"></a>项目名称，缺省值默认为region name。</p>
+<td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p1658514381137"><a name="p1658514381137"></a><a name="p1658514381137"></a>项目名称，缺省值默认为区域名称，例如：cn-north-1。</p>
 </td>
 </tr>
 <tr id="row1160152816186"><td class="cellrowborder" valign="top" width="15.68%" headers="mcps1.2.5.1.1 "><p id="p6585438161310"><a name="p6585438161310"></a><a name="p6585438161310"></a>ak</p>
 </td>
-<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p558543881313"><a name="p558543881313"></a><a name="p558543881313"></a>string</p>
+<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p81111128181719"><a name="p81111128181719"></a><a name="p81111128181719"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p115851238121318"><a name="p115851238121318"></a><a name="p115851238121318"></a>否</p>
+<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p1079843413176"><a name="p1079843413176"></a><a name="p1079843413176"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p16585203813139"><a name="p16585203813139"></a><a name="p16585203813139"></a>用户AK</p>
 </td>
 </tr>
 <tr id="row7611288187"><td class="cellrowborder" valign="top" width="15.68%" headers="mcps1.2.5.1.1 "><p id="p6585103819131"><a name="p6585103819131"></a><a name="p6585103819131"></a>sk</p>
 </td>
-<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p11585113871314"><a name="p11585113871314"></a><a name="p11585113871314"></a>string</p>
+<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p11585113871314"><a name="p11585113871314"></a><a name="p11585113871314"></a>否</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p1258517383136"><a name="p1258517383136"></a><a name="p1258517383136"></a>否</p>
+<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p1880163431716"><a name="p1880163431716"></a><a name="p1880163431716"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p10585133891316"><a name="p10585133891316"></a><a name="p10585133891316"></a>用户SK</p>
 </td>
