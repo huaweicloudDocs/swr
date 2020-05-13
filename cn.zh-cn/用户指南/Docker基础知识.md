@@ -4,12 +4,12 @@ Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻�
 
 ## 安装Docker<a name="section941018533817"></a>
 
-在安装Docker前，请了解Docker的基础知识，具体请参见  [Docker Documentation](https://docs.docker.com)。
+在安装Docker前，请了解Docker的基础知识，具体请参见[Docker Documentation](https://docs.docker.com)。
 
 Docker几乎支持在所有操作系统上安装，用户可以根据需要选择要安装的Docker版本，具体请参见[https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->-   Docker镜像的的存储可以使用华为云提供的容器镜像服务，由于容器镜像服务支持Docker 1.11.2及以上版本上传镜像，建议下载对应版本。  
+>-   Docker镜像的存储可以使用华为云提供的容器镜像服务，由于容器镜像服务支持Docker 1.11.2及以上版本上传镜像，建议下载对应版本。  
 >-   安装Docker需要连接互联网，内网服务器需要绑定弹性IP后才能访问。  
 
 另外，在Linux操作系统下，可以使用如下命令快速安装Docker。
@@ -52,7 +52,7 @@ sh get-docker.sh
 
     保存并退出。
 
-4.  使用 docker build \[选项\] <上下文路径\> 构建镜像。
+4.  使用** docker build**  \[_选项_\] <_上下文路径_\> 构建镜像。
 
     **docker build -t nginx:v3 .**
 

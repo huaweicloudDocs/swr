@@ -5,10 +5,10 @@
 ## 操作步骤<a name="section140815918599"></a>
 
 1.  <a name="li5768123671815"></a>获取镜像仓库访问地址、区域项目名称。
-    1.  访问我的凭证：[https://console.huaweicloud.com/iam/\#/myCredential](https://console.huaweicloud.com/iam/#/myCredential)。
-    2.  在“项目列表”页签中查找当前区域对应的项目。
+    1.  访问[我的凭证](https://console.huaweicloud.com/iam/?locale=zh-cn#/myCredential)。
+    2.  在“API凭证”的项目列表中查找当前区域对应的项目。
 
-        如下图所示，“中国华北区1“对应的项目为“cn-north-1“。
+        如下图所示，“华北-北京一“对应的项目为“cn-north-1“。
 
         **图 1**  区域与项目<a name="fig1548146070"></a>  
         ![](figures/区域与项目.png "区域与项目")
@@ -20,12 +20,8 @@
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >如果已有AK/SK，可以直接使用，无需再次获取。  
 
-    1.  访问我的凭证：[https://console.huaweicloud.com/iam/\#/myCredential](https://console.huaweicloud.com/iam/#/myCredential)。
-    2.  在“管理访问密钥”页签，单击列表下侧的“新增访问密钥”，创建新的访问密钥。
-
-        **图 2**  新增访问密钥<a name="fig1750516234350"></a>  
-        ![](figures/新增访问密钥.png "新增访问密钥")
-
+    1.  访问[我的凭证](https://console.huaweicloud.com/iam/?locale=zh-cn#/myCredential)。
+    2.  在“访问密钥”页签，单击“新增访问密钥”，创建新的访问密钥。
     3.  输入当前用户的登录密码，并通过邮箱或者手机进行验证。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -43,12 +39,12 @@
 
     其中$AK和$SK为[2](#li1863783911295)获取的AK/SK。
 
-    **图 3**  示例<a name="fig56444333813"></a>  
+    **图 2**  示例<a name="fig56444333813"></a>  
     ![](figures/示例.png "示例")
 
 4.  使用如下的格式拼接docker login指令。
 
-    **docker login -u  \[区域项目名\]@\[AK\]  -p  \[登录密钥\]  \[镜像仓库地址\]**
+    **docker login -u  **\[_区域项目名_\]**@**\[_AK_\]**  -p **  \[_登录密钥_\]  \[_镜像仓库地址_\]
 
     其中，区域项目名和镜像仓库地址在[1](#li5768123671815)中获取，AK在[2](#li1863783911295)中获取，登录密钥为[3](#li132430753010)的执行结果。
 
