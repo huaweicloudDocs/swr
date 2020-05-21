@@ -18,16 +18,16 @@
 2.  <a name="li1863783911295"></a>获取AK/SK访问密钥。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果已有AK/SK，可以直接使用，无需再次获取。  
+    >访问密钥即AK/SK（Access Key ID/Secret Access Key），表示一组密钥对，用于验证调用API发起请求的访问者身份，与密码的功能相似。如果您已有AK/SK，可以直接使用，无需再次获取。  
 
     1.  访问[我的凭证](https://console.huaweicloud.com/iam/?locale=zh-cn#/myCredential)。
-    2.  在“访问密钥”页签，单击“新增访问密钥”，创建新的访问密钥。
+    2.  在左侧导航栏中选择“访问密钥”，单击“新增访问密钥”。
     3.  输入当前用户的登录密码，并通过邮箱或者手机进行验证。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >在统一身份认证服务中创建的用户，如果创建时未填写邮箱或者手机号，则只需校验登录密码。  
 
-    4.  单击“确定”，下载访问密钥。
+    4.  单击“确定”，下载访问密钥，其中包含AK和SK。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >为防止访问密钥泄露，建议您将其保存到安全的位置。  
