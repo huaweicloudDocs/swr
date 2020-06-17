@@ -6,7 +6,7 @@ Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻�
 
 在安装Docker前，请了解Docker的基础知识，具体请参见[Docker Documentation](https://docs.docker.com)。
 
-Docker几乎支持在所有操作系统上安装，用户可以根据需要选择要安装的Docker版本，具体请参见[https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)。
+Docker几乎支持在所有操作系统上安装，用户可以根据需要选择要安装的Docker版本，具体请参见[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >-   Docker镜像的存储可以使用华为云提供的容器镜像服务，由于容器镜像服务支持Docker 1.11.2及以上版本上传镜像，建议下载对应版本。  
@@ -17,6 +17,8 @@ Docker几乎支持在所有操作系统上安装，用户可以根据需要选�
 ```
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 ## 制作Docker镜像<a name="section135321459915"></a>

@@ -5,7 +5,7 @@
 ## 操作步骤<a name="section140815918599"></a>
 
 1.  <a name="li5768123671815"></a>获取镜像仓库访问地址、区域项目名称。
-    1.  访问[我的凭证](https://console.huaweicloud.com/iam/?locale=zh-cn#/myCredential)。
+    1.  登录管理控制台，单击右上角您的用户名处，单击“我的凭证“。
     2.  在“API凭证”的项目列表中查找当前区域对应的项目。
 
         如下图所示，“华北-北京一“对应的项目为“cn-north-1“。
@@ -20,7 +20,7 @@
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >访问密钥即AK/SK（Access Key ID/Secret Access Key），表示一组密钥对，用于验证调用API发起请求的访问者身份，与密码的功能相似。如果您已有AK/SK，可以直接使用，无需再次获取。  
 
-    1.  访问[我的凭证](https://console.huaweicloud.com/iam/?locale=zh-cn#/myCredential)。
+    1.  登录管理控制台，单击右上角您的用户名处，单击“我的凭证“。
     2.  在左侧导航栏中选择“访问密钥”，单击“新增访问密钥”。
     3.  输入当前用户的登录密码，并通过邮箱或者手机进行验证。
 
