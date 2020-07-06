@@ -21,6 +21,33 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+在Euler操作系统下，安装Docker的方法如下：
+
+1.  登录弹性云服务器。
+2.  配置yum源。如果您的机器上还没配置yum源，可以参照如下方法配置：[如何使用华为云提供的EulerOS镜像源\(x86\_64和ARM\)？](https://support.huaweicloud.com/ecs_faq/ecs_faq_1006.html)。如果已配置过了，可跳过该步骤。
+3.  安装并运行Docker。
+    1.  获取yum源里的docker-engine包
+
+        **yum search docker-engine**
+
+    2.  使用**yum install -y**命令安装上一步获取的docker-engine包，x86架构示例**：**
+
+        **yum install docker-engine.x86\_64 -y**
+
+    3.  **systemctl enable docker**
+    4.  **systemctl start docker**
+
+4.  检查安装结果。
+
+    **docker --version**
+
+    回显如下类似信息，表示Docker安装成功。
+
+    ```
+    Docker version 1.13.1, build 8633870/1.13.1
+    ```
+
+
 ## 制作Docker镜像<a name="section135321459915"></a>
 
 本节指导您通过Dockerfile定制一个简单的Web应用程序的Docker镜像。Dockerfile是一个文本文件，其内包含了一条条的指令（Instruction），每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
@@ -54,7 +81,7 @@ sudo systemctl restart docker
 
     保存并退出。
 
-4.  使用** docker build**  \[_选项_\] <_上下文路径_\> 构建镜像。
+4.  使用**docker build**  \[_选项_\] <_上下文路径_\> 构建镜像。
 
     **docker build -t nginx:v3 .**
 
