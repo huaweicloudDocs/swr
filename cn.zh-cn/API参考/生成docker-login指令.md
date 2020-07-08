@@ -6,7 +6,7 @@
 
 ## URI<a name="section10482810165331"></a>
 
-POST /v2/manage/utils/secret?projectname=\{projectname\}&ak=\{ak\}&sk=\{sk\}
+POST /v2/manage/utils/secret?projectname=\{projectname\}
 
 参数说明请参见[表1](#table05962819187)。
 
@@ -30,24 +30,6 @@ POST /v2/manage/utils/secret?projectname=\{projectname\}&ak=\{ak\}&sk=\{sk\}
 <td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p19795113419177"><a name="p19795113419177"></a><a name="p19795113419177"></a>String</p>
 </td>
 <td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p1658514381137"><a name="p1658514381137"></a><a name="p1658514381137"></a>项目名称，缺省值默认为区域名称，例如：cn-north-1。</p>
-</td>
-</tr>
-<tr id="row1160152816186"><td class="cellrowborder" valign="top" width="15.68%" headers="mcps1.2.5.1.1 "><p id="p6585438161310"><a name="p6585438161310"></a><a name="p6585438161310"></a>ak</p>
-</td>
-<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p81111128181719"><a name="p81111128181719"></a><a name="p81111128181719"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p1079843413176"><a name="p1079843413176"></a><a name="p1079843413176"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p16585203813139"><a name="p16585203813139"></a><a name="p16585203813139"></a>用户AK</p>
-</td>
-</tr>
-<tr id="row7611288187"><td class="cellrowborder" valign="top" width="15.68%" headers="mcps1.2.5.1.1 "><p id="p6585103819131"><a name="p6585103819131"></a><a name="p6585103819131"></a>sk</p>
-</td>
-<td class="cellrowborder" valign="top" width="11.27%" headers="mcps1.2.5.1.2 "><p id="p11585113871314"><a name="p11585113871314"></a><a name="p11585113871314"></a>否</p>
-</td>
-<td class="cellrowborder" valign="top" width="15.06%" headers="mcps1.2.5.1.3 "><p id="p1880163431716"><a name="p1880163431716"></a><a name="p1880163431716"></a>String</p>
-</td>
-<td class="cellrowborder" valign="top" width="57.989999999999995%" headers="mcps1.2.5.1.4 "><p id="p10585133891316"><a name="p10585133891316"></a><a name="p10585133891316"></a>用户SK</p>
 </td>
 </tr>
 </tbody>
