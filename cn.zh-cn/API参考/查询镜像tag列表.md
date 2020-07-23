@@ -256,6 +256,11 @@ N/A
 <td class="cellrowborder" valign="top" width="83.00999999999999%" headers="mcps1.2.3.1.2 "><p id="p08461448114716"><a name="p08461448114716"></a><a name="p08461448114716"></a>错误请求，返回错误信息。</p>
 </td>
 </tr>
+<tr id="row631310443579"><td class="cellrowborder" valign="top" width="16.99%" headers="mcps1.2.3.1.1 "><p id="p12314164419574"><a name="p12314164419574"></a><a name="p12314164419574"></a>401</p>
+</td>
+<td class="cellrowborder" valign="top" width="83.00999999999999%" headers="mcps1.2.3.1.2 "><p id="p93141244155715"><a name="p93141244155715"></a><a name="p93141244155715"></a>鉴权失败。</p>
+</td>
+</tr>
 <tr id="row9846114818471"><td class="cellrowborder" valign="top" width="16.99%" headers="mcps1.2.3.1.1 "><p id="p188468486471"><a name="p188468486471"></a><a name="p188468486471"></a>404</p>
 </td>
 <td class="cellrowborder" valign="top" width="83.00999999999999%" headers="mcps1.2.3.1.2 "><p id="p11846134819473"><a name="p11846134819473"></a><a name="p11846134819473"></a>repository不存在。</p>

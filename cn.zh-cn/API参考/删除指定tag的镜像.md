@@ -84,6 +84,11 @@ N/A
 <td class="cellrowborder" valign="top" width="82.56%" headers="mcps1.2.3.1.2 "><p id="p83505352020"><a name="p83505352020"></a><a name="p83505352020"></a>错误请求，返回错误信息。</p>
 </td>
 </tr>
+<tr id="row147214765819"><td class="cellrowborder" valign="top" width="17.44%" headers="mcps1.2.3.1.1 "><p id="p12314164419574"><a name="p12314164419574"></a><a name="p12314164419574"></a>401</p>
+</td>
+<td class="cellrowborder" valign="top" width="82.56%" headers="mcps1.2.3.1.2 "><p id="p93141244155715"><a name="p93141244155715"></a><a name="p93141244155715"></a>鉴权失败。</p>
+</td>
+</tr>
 <tr id="row187384312201"><td class="cellrowborder" valign="top" width="17.44%" headers="mcps1.2.3.1.1 "><p id="p11739731182020"><a name="p11739731182020"></a><a name="p11739731182020"></a>404</p>
 </td>
 <td class="cellrowborder" valign="top" width="82.56%" headers="mcps1.2.3.1.2 "><p id="p137391931122010"><a name="p137391931122010"></a><a name="p137391931122010"></a>repository不存在或指定的tag不存在。</p>

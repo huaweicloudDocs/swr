@@ -86,7 +86,7 @@ N/A
 </td>
 <td class="cellrowborder" valign="top" width="19.65196519651965%" headers="mcps1.2.4.1.2 "><p id="p17406855153012"><a name="p17406855153012"></a><a name="p17406855153012"></a>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="58.825882588258814%" headers="mcps1.2.4.1.3 "><p id="p13406195533010"><a name="p13406195533010"></a><a name="p13406195533010"></a>API的URL地址。</p>
+<td class="cellrowborder" valign="top" width="58.825882588258814%" headers="mcps1.2.4.1.3 "><p id="p13406195533010"><a name="p13406195533010"></a><a name="p13406195533010"></a>API的URL地址，详情请参见<a href="#table453717423323">表4</a>。</p>
 </td>
 </tr>
 <tr id="row626682835815"><td class="cellrowborder" valign="top" width="21.52215221522152%" headers="mcps1.2.4.1.1 "><p id="p1891845543117"><a name="p1891845543117"></a><a name="p1891845543117"></a>version</p>
@@ -123,18 +123,45 @@ N/A
 </tbody>
 </table>
 
+**表 4**  links参数说明
+
+<a name="table453717423323"></a>
+<table><thead align="left"><tr id="row1553720421323"><th class="cellrowborder" valign="top" width="21.52215221522152%" id="mcps1.2.4.1.1"><p id="p1553744263216"><a name="p1553744263216"></a><a name="p1553744263216"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="19.65196519651965%" id="mcps1.2.4.1.2"><p id="p15379427326"><a name="p15379427326"></a><a name="p15379427326"></a>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="58.825882588258814%" id="mcps1.2.4.1.3"><p id="p10537134212325"><a name="p10537134212325"></a><a name="p10537134212325"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row45372426327"><td class="cellrowborder" valign="top" width="21.52215221522152%" headers="mcps1.2.4.1.1 "><p id="p9537194253219"><a name="p9537194253219"></a><a name="p9537194253219"></a>href</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.65196519651965%" headers="mcps1.2.4.1.2 "><p id="p1753864273219"><a name="p1753864273219"></a><a name="p1753864273219"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.825882588258814%" headers="mcps1.2.4.1.3 "><p id="p2053834210320"><a name="p2053834210320"></a><a name="p2053834210320"></a>链接</p>
+</td>
+</tr>
+<tr id="row125383424322"><td class="cellrowborder" valign="top" width="21.52215221522152%" headers="mcps1.2.4.1.1 "><p id="p15387424321"><a name="p15387424321"></a><a name="p15387424321"></a>rel</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.65196519651965%" headers="mcps1.2.4.1.2 "><p id="p05381842163219"><a name="p05381842163219"></a><a name="p05381842163219"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.825882588258814%" headers="mcps1.2.4.1.3 "><p id="p5538144212329"><a name="p5538144212329"></a><a name="p5538144212329"></a>描述</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 **响应示例**
 
 ```
 {
     "version": {
         "id": "v2",
-        "links": [
+        "links": 
             {
                 "href": "https://swr-api.xxxx.myhuaweicloud.com/v2/",
                 "rel": "self"
             }
-        ],
         "min_version": "2.0",
         "status": "CURRENT",
         "updated": "2017-12-09T00:00:00Z",
@@ -145,9 +172,9 @@ N/A
 
 ## 状态码<a name="s336c1dbc7af446a1b3cc077ea3f82fc9"></a>
 
-状态码如[表4](#t33d02fa79e8443868a71c99f411610a5)所示。
+状态码如[表5](#t33d02fa79e8443868a71c99f411610a5)所示。
 
-**表 4**  状态码
+**表 5**  状态码
 
 <a name="t33d02fa79e8443868a71c99f411610a5"></a>
 <table><thead align="left"><tr id="r9eb80d64e8f34d0db940daa95fc929dd"><th class="cellrowborder" valign="top" width="16.439999999999998%" id="mcps1.2.3.1.1"><p id="a7e51ed73a71e4dc29d0dd4aae3016632"><a name="a7e51ed73a71e4dc29d0dd4aae3016632"></a><a name="a7e51ed73a71e4dc29d0dd4aae3016632"></a>状态码</p>
