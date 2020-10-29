@@ -66,24 +66,9 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p8165140173719"><a name="p8165140173719"></a><a name="p8165140173719"></a>删除镜像仓库中指定tag的镜像。</p>
 </td>
 </tr>
-<tr id="row16259104105216"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p122608416524"><a name="p122608416524"></a><a name="p122608416524"></a><a href="生成docker-login指令.md">生成docker login指令</a></p>
+<tr id="row16259104105216"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p122608416524"><a name="p122608416524"></a><a name="p122608416524"></a><a href="生成临时登录指令.md">生成临时登录指令</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p64081653142219"><a name="p64081653142219"></a><a name="p64081653142219"></a>通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成docker login指令。</p>
-</td>
-</tr>
-<tr id="row1996444614579"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p18964164619574"><a name="p18964164619574"></a><a name="p18964164619574"></a><a href="查询官方镜像列表.md">查询官方镜像列表</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p10964114655716"><a name="p10964114655716"></a><a name="p10964114655716"></a>查询官方镜像列表。容器镜像服务为您提供大量的公有镜像资源检索，包括docker官方镜像资源。您可以收藏这些镜像并推送到自己的仓库之中，方便使用。</p>
-</td>
-</tr>
-<tr id="row27545115719"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p675125113575"><a name="p675125113575"></a><a name="p675125113575"></a><a href="查询官方镜像详情.md">查询官方镜像详情</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1075165111571"><a name="p1075165111571"></a><a name="p1075165111571"></a>查询官方镜像详情。</p>
-</td>
-</tr>
-<tr id="row14834124815572"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p15834164815579"><a name="p15834164815579"></a><a name="p15834164815579"></a><a href="查询官方镜像版本列表.md">查询官方镜像版本列表</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1583464835719"><a name="p1583464835719"></a><a name="p1583464835719"></a>查询官方镜像版本列表。</p>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p64081653142219"><a name="p64081653142219"></a><a name="p64081653142219"></a>通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成临时登录指令。</p>
 </td>
 </tr>
 <tr id="row191740203579"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1617512015712"><a name="p1617512015712"></a><a name="p1617512015712"></a><a href="创建共享账号.md">创建共享账号</a></p>
@@ -126,16 +111,6 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p155261579206"><a name="p155261579206"></a><a name="p155261579206"></a>查询<span>容器镜像</span>服务指定API版本信息列表。</p>
 </td>
 </tr>
-<tr id="row7955105731915"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1552677112018"><a name="p1552677112018"></a><a name="p1552677112018"></a><a href="获取镜像中心下载次数统计.md">获取镜像中心下载次数统计</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p4526107132018"><a name="p4526107132018"></a><a name="p4526107132018"></a>获取镜像中心下载次数统计。</p>
-</td>
-</tr>
-<tr id="row181264548191"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1852677112013"><a name="p1852677112013"></a><a name="p1852677112013"></a><a href="获取镜像加速器地址.md">获取镜像加速器地址</a></p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p20526774204"><a name="p20526774204"></a><a name="p20526774204"></a>获取镜像加速器地址。</p>
-</td>
-</tr>
 <tr id="row1681441205812"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p5814416584"><a name="p5814416584"></a><a name="p5814416584"></a><a href="创建组织权限.md">创建组织权限</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p781417135817"><a name="p781417135817"></a><a name="p781417135817"></a>创建组织权限。</p>
@@ -154,6 +129,106 @@
 <tr id="row15903376582"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p89031771584"><a name="p89031771584"></a><a name="p89031771584"></a><a href="查询组织权限.md">查询组织权限</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p17903278585"><a name="p17903278585"></a><a name="p17903278585"></a>查询组织权限。</p>
+</td>
+</tr>
+<tr id="row69032715819"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p179032715816"><a name="p179032715816"></a><a name="p179032715816"></a><a href="创建镜像权限.md">创建镜像权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p109031473587"><a name="p109031473587"></a><a name="p109031473587"></a>创建镜像权限。</p>
+</td>
+</tr>
+<tr id="row209039711585"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p19039795810"><a name="p19039795810"></a><a name="p19039795810"></a><a href="删除镜像权限.md">删除镜像权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p159037715814"><a name="p159037715814"></a><a name="p159037715814"></a>删除镜像权限。</p>
+</td>
+</tr>
+<tr id="row1290317712583"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p89031175588"><a name="p89031175588"></a><a name="p89031175588"></a><a href="更新镜像权限.md">更新镜像权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p290320735818"><a name="p290320735818"></a><a name="p290320735818"></a>更新镜像权限。</p>
+</td>
+</tr>
+<tr id="row20903127145810"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p08621419155915"><a name="p08621419155915"></a><a name="p08621419155915"></a><a href="查询镜像权限.md">查询镜像权限</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1790314710582"><a name="p1790314710582"></a><a name="p1790314710582"></a>查询镜像权限。</p>
+</td>
+</tr>
+<tr id="row97891428362"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p2790184223616"><a name="p2790184223616"></a><a name="p2790184223616"></a><a href="获取镜像同步任务信息.md">获取镜像同步任务信息</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p19790184263613"><a name="p19790184263613"></a><a name="p19790184263613"></a>获取镜像同步任务信息</p>
+</td>
+</tr>
+<tr id="row637353143615"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p12379531361"><a name="p12379531361"></a><a name="p12379531361"></a><a href="获取镜像自动同步任务列表.md">获取镜像自动同步任务列表</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p438195383614"><a name="p438195383614"></a><a name="p438195383614"></a>获取镜像自动同步任务列表</p>
+</td>
+</tr>
+<tr id="row198006556361"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1801155519361"><a name="p1801155519361"></a><a name="p1801155519361"></a><a href="创建镜像自动同步任务.md">创建镜像自动同步任务</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p8765363429"><a name="p8765363429"></a><a name="p8765363429"></a>创建镜像自动同步任务</p>
+</td>
+</tr>
+<tr id="row1434194512361"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1434174511366"><a name="p1434174511366"></a><a name="p1434174511366"></a><a href="删除镜像自动同步任务.md">删除镜像自动同步任务</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p834154518363"><a name="p834154518363"></a><a name="p834154518363"></a>删除镜像自动同步任务</p>
+</td>
+</tr>
+<tr id="row194571823372"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1345719223710"><a name="p1345719223710"></a><a name="p1345719223710"></a><a href="手动同步镜像.md">手动同步镜像</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p5458202113718"><a name="p5458202113718"></a><a name="p5458202113718"></a>手动同步镜像</p>
+</td>
+</tr>
+<tr id="row845815210377"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p114583293710"><a name="p114583293710"></a><a name="p114583293710"></a><a href="创建触发器.md">创建触发器</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p7458525372"><a name="p7458525372"></a><a name="p7458525372"></a>创建触发器</p>
+</td>
+</tr>
+<tr id="row1645810203713"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p445819211372"><a name="p445819211372"></a><a name="p445819211372"></a><a href="获取镜像仓库下的触发器列表.md">获取镜像仓库下的触发器列表</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p4902125214424"><a name="p4902125214424"></a><a name="p4902125214424"></a>获取镜像仓库下的触发器列表</p>
+</td>
+</tr>
+<tr id="row94584253711"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p124587233718"><a name="p124587233718"></a><a name="p124587233718"></a><a href="删除触发器.md">删除触发器</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p1651217572423"><a name="p1651217572423"></a><a name="p1651217572423"></a>删除触发器</p>
+</td>
+</tr>
+<tr id="row5525168103710"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p052568133719"><a name="p052568133719"></a><a name="p052568133719"></a><a href="获取触发器详情.md">获取触发器详情</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p18525108193718"><a name="p18525108193718"></a><a name="p18525108193718"></a>获取触发器详情</p>
+</td>
+</tr>
+<tr id="row952538183716"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p115254811377"><a name="p115254811377"></a><a name="p115254811377"></a><a href="更新触发器配置.md">更新触发器配置</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p9526687370"><a name="p9526687370"></a><a name="p9526687370"></a>更新触发器配置</p>
+</td>
+</tr>
+<tr id="row195267883718"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p752648113717"><a name="p752648113717"></a><a name="p752648113717"></a><a href="创建镜像老化规则.md">创建镜像老化规则</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p4526582372"><a name="p4526582372"></a><a name="p4526582372"></a>创建镜像老化规则</p>
+</td>
+</tr>
+<tr id="row1652620843713"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p1752613853713"><a name="p1752613853713"></a><a name="p1752613853713"></a><a href="获取镜像老化规则列表.md">获取镜像老化规则列表</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p052698183712"><a name="p052698183712"></a><a name="p052698183712"></a>获取镜像老化规则列表</p>
+</td>
+</tr>
+<tr id="row105261286374"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p352610814374"><a name="p352610814374"></a><a name="p352610814374"></a><a href="删除镜像老化规则.md">删除镜像老化规则</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p55268813376"><a name="p55268813376"></a><a name="p55268813376"></a>删除镜像老化规则</p>
+</td>
+</tr>
+<tr id="row1052611812373"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p852648203715"><a name="p852648203715"></a><a name="p852648203715"></a><a href="获取镜像老化规则记录.md">获取镜像老化规则记录</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p952628103716"><a name="p952628103716"></a><a name="p952628103716"></a>获取镜像老化规则记录</p>
+</td>
+</tr>
+<tr id="row12526158183710"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p195266811379"><a name="p195266811379"></a><a name="p195266811379"></a><a href="修改镜像老化规则.md">修改镜像老化规则</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p252617833710"><a name="p252617833710"></a><a name="p252617833710"></a>修改镜像老化规则</p>
+</td>
+</tr>
+<tr id="row75268813716"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p352616853712"><a name="p352616853712"></a><a name="p352616853712"></a><a href="获取镜像老化记录.md">获取镜像老化记录</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p852698143712"><a name="p852698143712"></a><a name="p852698143712"></a>获取镜像老化记录</p>
 </td>
 </tr>
 </tbody>
